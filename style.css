@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&family=Shadows+Into+Light&display=swap');
+
+
+:root {
+    --primary-color: #22254b;
+    --secondary-color: #373b69;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0px;
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px;
+}
+
+.search {
+    background-color: transparent;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 16px;
+    border: 2px solid var(--secondary-color);
+    background-color: var(--secondary-color);
+}
+
+.search:focus {
+    outline: none;
+    background-color: var(--primary-color);
+    color: #eee;
+    font-style: bold;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie {
+    width: 300px;
+    margin: 16px;
+    background-color: var(--secondary-color);
+    -webkit-box-shadow: 0px 0px 15px 0px #000000;
+    box-shadow: 0px 0px 15px 0px #000000;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+
+.movie img {
+    width: 100%;
+}
+
+
+
+.moive__info {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px;
+    color: #eee;
+}
+
+.moive__info h3 {
+    margin: 0;
+}
+
+.moive__info span {
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+.moive__overview {
+    background-color: #fff;
+    padding: 32px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+
+.movie:hover .moive__overview {
+    transform: translateY(0%);
+}
